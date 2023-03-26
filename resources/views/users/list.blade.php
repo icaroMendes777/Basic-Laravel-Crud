@@ -2,9 +2,13 @@
 
 @include('users.header', ['page' => 'list'])
 
+<div class="d-flex justify-content-between">
+    <h3 class="m-4 text-info">Total: {{$total}}</h3>
 
-<h3 class="m-4 text-info">Total: {{$total}}</h3>
-
+    <div>
+    <a href="{{ URL::route('user.new') }}" class="btn btn-success ">Novo Usuário</a>
+    </div>
+</div>
 <table class="table">
     <thead>
       <tr>

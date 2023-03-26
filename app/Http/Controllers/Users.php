@@ -37,6 +37,7 @@ class Users extends Controller
     public function create()
     {
         //
+        return view('users.new_user');
     }
 
     /**
@@ -44,7 +45,20 @@ class Users extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+
+
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+
+        User::create($validated);
+
+
+        //----!!! IMPORTANTE!
+        $request->session()->regenerate();
     }
 
     /**

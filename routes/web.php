@@ -21,9 +21,15 @@ Route::get('/', function () {
 
 Route::get('/users', [Users::class, 'index'])->name('list');
 
-Route::get('/users/{id}', [Users::class, 'show'])->name('user');
+Route::get('/user/{id}', [Users::class, 'show'])->name('user');
 
-Route::get('/users/{id}/delete', [Users::class, 'destroy'])->name('user.delete');
+Route::get('/user/{id}/delete', [Users::class, 'destroy'])->name('user.delete');
+
+
+
+Route::get('/users/new', [Users::class, 'create'])->name('user.new');
+
+Route::post('/users/store', [Users::class, 'store'])->name('user.store');
 
 //Route::get('/users/sobre', [Users::class, 'user'])->name('sobre');
 
