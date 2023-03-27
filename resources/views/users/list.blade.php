@@ -16,6 +16,7 @@
         <th scope="col">Nome</th>
         <th scope="col">Email</th>
         <th scope="col">Detalhes</th>
+        <th scope="col">Editar</th>
         <th scope="col">Deletar</th>
       </tr>
     </thead>
@@ -27,6 +28,7 @@
             <td>{{$u->name}}</td>
             <td>{{$u->email}}</td>
             <td><a href="{{ URL::route('user', $u->id) }}" class="btn btn-primary">Ver</a></td>
+            <td><a href="{{ URL::route('user.edit', $u->id) }}" class="btn btn-primary">Editar</a></td>
             <td><a href="{{ URL::route('user.delete', $u->id) }}" class="btn btn-danger">Deletar</a></td>
         </tr>
     @endforeach

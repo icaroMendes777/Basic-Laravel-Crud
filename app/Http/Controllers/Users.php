@@ -77,7 +77,11 @@ class Users extends Controller
      */
     public function edit(string $id)
     {
-        //
+
+        $user = User::find($id);
+
+        return view('users.edit_user', ['user' => $user]);
+
     }
 
     /**
@@ -86,6 +90,7 @@ class Users extends Controller
     public function update(Request $request, string $id)
     {
         //
+        dd($request);
     }
 
     /**

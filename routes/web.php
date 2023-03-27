@@ -23,7 +23,11 @@ Route::get('/users', [Users::class, 'index'])->name('list');
 
 Route::get('/user/{id}', [Users::class, 'show'])->name('user');
 
+Route::get('/user/{id}/edit', [Users::class, 'edit'])->name('user.edit');
+
 Route::get('/user/{id}/delete', [Users::class, 'destroy'])->name('user.delete');
+
+Route::post('/user/{id}/update', [Users::class, 'update'])->name('user.update');
 
 
 
