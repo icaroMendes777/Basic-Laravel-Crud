@@ -59,6 +59,9 @@ class Users extends Controller
 
         //----!!! IMPORTANTE!
         $request->session()->regenerate();
+
+        return redirect('/');
+
     }
 
     /**

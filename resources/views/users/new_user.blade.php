@@ -11,14 +11,14 @@
 <br/>
 <form action="{{ route('user.store') }}" method="POST">
 
-    @dd(request()->all())
+
 
     @csrf
 
 
         <label>
             Nome:
-            <input type="text" name="name">
+            <input type="text" name="name" value={{old('name')}}>
             @error('name')
                 <div style="color:red">Insira um nome</div>
             @enderror
@@ -29,7 +29,7 @@
 
         <label>
             Email:
-            <input type="email" name="email">
+            <input type="email" name="email" >
             @error('email')
                 <div style="color:red">Insira um email</div>
             @enderror
