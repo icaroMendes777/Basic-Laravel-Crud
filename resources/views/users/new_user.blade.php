@@ -18,9 +18,11 @@
 
         <label>
             Nome:
-            <input type="text" name="name" value={{old('name')}}>
+            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value={{old('name')}} >
+
+
             @error('name')
-                <div style="color:red">Insira um nome</div>
+                <div class="invalid-feedback">{{$message}}</div>
             @enderror
         </label>
 
@@ -29,9 +31,9 @@
 
         <label>
             Email:
-            <input type="email" name="email" >
+            <input type="text" name="email" class="form-control @error('email') is-invalid @enderror"  value={{old('email')}}>
             @error('email')
-                <div style="color:red">Insira um email</div>
+                <div class="invalid-feedback">{{$message}}</div>
             @enderror
         </label>
 
@@ -40,7 +42,10 @@
 
         <label>
             Sobre:
-            <textarea  name="sobre"></textarea>
+            <textarea  name="sobre" class="form-control @error('sobre') is-invalid @enderror" value={{old('sobre')}}></textarea>
+            @error('sobre')
+                <div class="invalid-feedback">{{$message}}</div>
+            @enderror
         </label>
 
 
@@ -50,9 +55,9 @@
 
         <label>
             Senha:
-            <input type="password" name="password">
+            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" value={{old('password')}}>
             @error('password')
-                <div style="color:red">Insira uma senha</div>
+                <div class="invalid-feedback">{{$message}}</div>
             @enderror
         </label>
 

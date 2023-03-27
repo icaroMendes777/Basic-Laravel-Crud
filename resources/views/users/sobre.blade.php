@@ -9,7 +9,7 @@
 <p>Este é um projeto de crud básico em Laravel.</p>
     <p></p>
 
-    <p>Tabelas, botões, cards e nav são renderizadas usando as classes do framework Bootstrap.</p>
+    <p>Tabelas, botões, cards e nav são estilizados usando o framework Bootstrap.</p>
 
 
 </div>
