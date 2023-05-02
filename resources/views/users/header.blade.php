@@ -4,7 +4,7 @@
 
 <ul class="nav nav-tabs">
     <li class="nav-item">
-      <a class="nav-link @if($page=='list') active @endif" href="{{ URL::route('list') }}">Usuários</a>
+      <a class="nav-link @if($page=='list') active @endif" href="{{ URL::route('user.list') }}">Usuários</a>
     </li>
     <li class="nav-item">
       <a class="nav-link @if($page=='sobre') active @endif" href="{{ URL::route('sobre') }}">Sobre</a>
